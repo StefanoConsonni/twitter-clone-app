@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 
 // components
 import Head from "next/head";
+import Feed from "../components/Feed/Feed";
 import Sidebar from "../components/Sidebar";
 
 const Home: NextPage = () => {
@@ -39,9 +40,7 @@ const Home: NextPage = () => {
       </Head>
       <main>
         <Sidebar />
-
-        {/* Feed */}
-
+        <Feed />
         {/* Widgets */}
       </main>
     </>
