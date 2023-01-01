@@ -11,6 +11,7 @@ const Home: NextPage = () => {
         <title>Twitter</title>
         <meta name="description" content="Twitter" />
 
+        {/* Favicons */}
         <link rel="icon" href="/favicons/favicon.ico" />
         <link
           rel="apple-touch-icon"

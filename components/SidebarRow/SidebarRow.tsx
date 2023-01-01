@@ -1,24 +1,22 @@
 import React from "react";
-
-import classes from "./styles.module.css";
+import styles from "./styles.module.css";
 
 interface SidebarRowProps {
-  Icon: any;
+  Icon: React.FC<any>;
   title: string;
 }
 
 const iconStyles = {
-  fontSize: "38px",
+  fontSize: "2rem",
+  marginRight: "1rem",
 };
 
 function SidebarRow({ Icon, title }: SidebarRowProps) {
   return (
     <>
-      <div className={classes["sidebar-row-container"]}>
+      <div className={styles["sidebar-row-container"]}>
         <Icon sx={iconStyles} />
-        <span>
-          <p>{title}</p>
-        </span>
+        <p>{title}</p>
       </div>
     </>
   );
