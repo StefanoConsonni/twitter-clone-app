@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./styles.module.css";
 import SyncIcon from "@mui/icons-material/Sync";
 
 const iconStyles = {
@@ -12,12 +13,13 @@ const iconStyles = {
   "&:active": {
     transform: "scale(1.25)",
   },
+  marginTop: "2rem",
 };
 
 function Feed() {
   return (
-    <div>
-      <h1>Home</h1>
+    <div className={styles["feed-title-container"]}>
+      <h1 className={styles["feed-title"]}>Home</h1>
       <SyncIcon sx={iconStyles} />
     </div>
   );
