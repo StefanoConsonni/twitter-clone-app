@@ -2,10 +2,11 @@ import React from "react";
 
 // components
 import Image from "next/image";
-import SidebarRow from "./SidebarRow/SidebarRow";
+import SidebarRow from "../SidebarRow/SidebarRow";
 
 // assets
-import twitterLogo from "../public/img/twitter-logo.png";
+import styles from "./styles.module.css";
+import twitterLogo from "../../public/img/twitter-logo.png";
 import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
 import TagIcon from "@mui/icons-material/Tag";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
@@ -17,7 +18,7 @@ import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 
 function Sidebar() {
   return (
-    <>
+    <div className={styles["sidebar-container"]}>
       <Image
         src={twitterLogo}
         alt="logo of Twitter"
@@ -32,7 +33,7 @@ function Sidebar() {
       <SidebarRow Icon={ListAltIcon} title="Lists" />
       <SidebarRow Icon={PersonOutlineIcon} title="Sign In" />
       <SidebarRow Icon={MoreHorizIcon} title="More" />
-    </>
+    </div>
   );
 }
 

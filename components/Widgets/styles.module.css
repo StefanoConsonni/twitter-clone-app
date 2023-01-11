@@ -1,0 +1,10 @@
+.widgets-container {
+  grid-column: span 2 / span 2;
+  display: none;
+}
+
+@media (min-width: 944px) {
+  .widgets-container {
+    display: inline;
+  }
+}

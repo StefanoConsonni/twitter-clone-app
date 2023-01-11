@@ -3,7 +3,7 @@ import type { NextPage } from "next";
 // components
 import Head from "next/head";
 import Feed from "../components/Feed/Feed";
-import Sidebar from "../components/Sidebar";
+import Sidebar from "../components/Sidebar/Sidebar";
 import Widgets from "../components/Widgets/Widgets";
 
 const Home: NextPage = () => {
@@ -39,6 +39,7 @@ const Home: NextPage = () => {
           color="#5bbad5"
         />
       </Head>
+
       <main>
         <Sidebar />
         <Feed />

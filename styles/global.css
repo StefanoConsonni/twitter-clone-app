@@ -18,3 +18,9 @@
   font-family: "Roboto", sans-serif;
   font-weight: 500;
 }
+
+main {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-column: span 2 / span 2;
+}

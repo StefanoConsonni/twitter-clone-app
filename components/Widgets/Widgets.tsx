@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./styles.module.css";
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 import { styled, alpha } from "@mui/material/styles";
 import SearchIcon from "@mui/icons-material/Search";
@@ -48,7 +49,7 @@ const iconStyles = {
 
 function Widgets() {
   return (
-    <div>
+    <div className={styles["widgets-container"]}>
       <Search>
         <SearchIconWrapper>
           <SearchIcon sx={iconStyles} />
