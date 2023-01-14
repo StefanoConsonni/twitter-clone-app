@@ -33,9 +33,10 @@ const SearchIconWrapper = styled("div")(({ theme }) => ({
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
   color: "inherit",
+  width: "22.5rem",
+  marginLeft: "-0.5rem",
   "& .MuiInputBase-input": {
     padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
     width: "100%",
     background: "var(--grey-1)",
@@ -43,22 +44,25 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-const iconStyles = {
+const searchIconStyles = {
   color: "var(--grey-2)",
+  marginLeft: "-0.6rem",
 };
 
 function Widgets() {
   return (
     <div className={styles["widgets-container"]}>
-      <Search>
-        <SearchIconWrapper>
-          <SearchIcon sx={iconStyles} />
-        </SearchIconWrapper>
-        <StyledInputBase
-          placeholder="Search Twitter"
-          inputProps={{ "aria-label": "search Twitter" }}
-        />
-      </Search>
+      <div className={styles["searchbox-container"]}>
+        <Search>
+          <SearchIconWrapper>
+            <SearchIcon sx={searchIconStyles} />
+          </SearchIconWrapper>
+          <StyledInputBase
+            placeholder="Search Twitter"
+            inputProps={{ "aria-label": "search Twitter" }}
+          />
+        </Search>
+      </div>
 
       <TwitterTimelineEmbed
         sourceType="profile"

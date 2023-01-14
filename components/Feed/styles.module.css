@@ -1,10 +1,12 @@
 .feed-container {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
   grid-column: span 7 / span 7;
+  height: 200rem;
+  justify-content: space-between;
   margin-bottom: auto;
   margin-top: -2.3rem;
+  border-style: solid;
+  border-color: var(--grey-3);
 }
 
 .feed-title {

@@ -1,7 +1,6 @@
 import React from "react";
 
 // components
-import Image from "next/image";
 import SidebarRow from "../SidebarRow/SidebarRow";
 
 // assets

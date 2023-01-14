@@ -1,0 +1,11 @@
+.home-container {
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+@media (min-width: 1200px) {
+  .home-container {
+    max-width: 88rem;
+    margin: 0 auto;
+  }
+}

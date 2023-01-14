@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import styles from "./styles.module.css";
 
 // components
 import Head from "next/head";
@@ -8,7 +9,7 @@ import Widgets from "../components/Widgets/Widgets";
 
 const Home: NextPage = () => {
   return (
-    <>
+    <div className={styles["home-container"]}>
       <Head>
         <title>Twitter</title>
         <meta name="description" content="Twitter" />
@@ -45,7 +46,7 @@ const Home: NextPage = () => {
         <Feed />
         <Widgets />
       </main>
-    </>
+    </div>
   );
 };
 

@@ -6,6 +6,8 @@ const iconStyles = {
   color: "var(--light-blue)",
   fontSize: "2rem",
   cursor: "pointer",
+  marginTop: "2.7rem",
+  marginRight: "1.2rem",
   transition: "all 0.5s ease-out",
   "&:hover": {
     transform: "rotate(180deg)",
@@ -13,7 +15,6 @@ const iconStyles = {
   "&:active": {
     transform: "scale(1.25)",
   },
-  marginTop: "2rem",
 };
 
 function Feed() {
@@ -22,6 +23,8 @@ function Feed() {
       <h1 className={styles["feed-title"]}>Home</h1>
       <SyncIcon sx={iconStyles} />
     </div>
+
+    // TweetBox
   );
 }
 

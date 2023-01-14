@@ -2,6 +2,11 @@
   grid-column: span 3 / span 3;
   display: none;
   margin-top: 0.3rem;
+  margin-left: 1rem;
+}
+
+.searchbox-container {
+  margin-bottom: 1rem;
 }
 
 @media (min-width: 1200px) {
