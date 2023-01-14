@@ -18,7 +18,7 @@ const iconStyles = {
 
 function Feed() {
   return (
-    <div className={styles["feed-title-container"]}>
+    <div className={styles["feed-container"]}>
       <h1 className={styles["feed-title"]}>Home</h1>
       <SyncIcon sx={iconStyles} />
     </div>

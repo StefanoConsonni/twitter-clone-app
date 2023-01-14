@@ -1,12 +1,20 @@
-.feed-title-container {
+.feed-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  grid-column: span 5 / span 5;
+  grid-column: span 7 / span 7;
+  margin-bottom: auto;
+  margin-top: -2.3rem;
 }
 
 .feed-title {
   padding: 2rem 2rem 0 2rem;
   font-weight: 600;
   font-size: 1.4rem;
+}
+
+@media (min-width: 1200px) {
+  .feed-container {
+    grid-column: span 4 / span 4;
+  }
 }

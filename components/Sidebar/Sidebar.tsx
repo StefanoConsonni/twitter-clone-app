@@ -6,7 +6,7 @@ import SidebarRow from "../SidebarRow/SidebarRow";
 
 // assets
 import styles from "./styles.module.css";
-import twitterLogo from "../../public/img/twitter-logo.png";
+import TwitterIcon from "@mui/icons-material/Twitter";
 import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
 import TagIcon from "@mui/icons-material/Tag";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
@@ -16,15 +16,19 @@ import ListAltIcon from "@mui/icons-material/ListAlt";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 
+const twitterIconStyles = {
+  fontSize: "2.2rem",
+  color: "var(--light-blue)",
+  marginLeft: "2rem",
+  paddingRight: "2.8rem",
+  marginTop: "0.4rem",
+  cursor: "pointer",
+};
+
 function Sidebar() {
   return (
     <div className={styles["sidebar-container"]}>
-      <Image
-        src={twitterLogo}
-        alt="logo of Twitter"
-        width={50}
-        style={{ marginLeft: "1.5rem", cursor: "pointer" }}
-      />
+      <TwitterIcon sx={twitterIconStyles} />
       <SidebarRow Icon={HomeRoundedIcon} title="Home" />
       <SidebarRow Icon={TagIcon} title="Explore" />
       <SidebarRow Icon={NotificationsNoneIcon} title="Notifications" />

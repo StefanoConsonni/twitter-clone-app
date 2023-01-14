@@ -1,5 +1,12 @@
 .sidebar-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   grid-column: span 2 / span 2;
+}
+
+@media (min-width: 600px) {
+  .sidebar-container {
+    align-items: flex-start;
+  }
 }
