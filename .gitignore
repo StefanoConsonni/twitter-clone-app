@@ -12,12 +12,18 @@
 /.next/
 /out/
 
+# sanity
+/.sanity
+
 # production
 /build
 
 # misc
 .DS_Store
+dist
+/.vscode
 *.pem
+*.log
 
 # debug
 npm-debug.log*
