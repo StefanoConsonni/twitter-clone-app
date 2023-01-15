@@ -1,16 +1,19 @@
 .feed-container {
-  display: flex;
   grid-column: span 7 / span 7;
-  height: 200rem;
-  justify-content: space-between;
-  margin-bottom: auto;
+  height: 300vh;
   margin-top: -2.3rem;
   border-style: solid;
   border-color: var(--grey-3);
 }
 
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .feed-title {
-  padding: 2rem 2rem 0 2rem;
+  padding: 2rem 2rem 0 1rem;
   font-weight: 600;
   font-size: 1.4rem;
 }

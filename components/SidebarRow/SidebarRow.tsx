@@ -13,12 +13,10 @@ const iconStyles = {
 
 function SidebarRow({ Icon, title }: SidebarRowProps) {
   return (
-    <>
-      <div className={styles["sidebar-row-container"]}>
-        <Icon sx={iconStyles} />
-        <p>{title}</p>
-      </div>
-    </>
+    <div className={styles["sidebar-row-container"]}>
+      <Icon sx={iconStyles} />
+      <p>{title}</p>
+    </div>
   );
 }
 

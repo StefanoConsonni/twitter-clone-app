@@ -1,10 +1,8 @@
 import React from "react";
-
-// components
 import SidebarRow from "../SidebarRow/SidebarRow";
+import styles from "./styles.module.css";
 
 // assets
-import styles from "./styles.module.css";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
 import TagIcon from "@mui/icons-material/Tag";
