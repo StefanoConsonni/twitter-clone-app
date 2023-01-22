@@ -1,5 +1,4 @@
-import category from "./category";
 import tweet from "./tweet";
 import comment from "./comment";
 
-export const schemaTypes = [tweet, comment, category];
+export const schemaTypes = [tweet, comment];

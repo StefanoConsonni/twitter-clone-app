@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+
 import styles from "./styles.module.css";
 import SyncIcon from "@mui/icons-material/Sync";
 import TweetBox from "../TweetBox/TweetBox";
