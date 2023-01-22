@@ -35,6 +35,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   color: "inherit",
   width: "22.5rem",
   marginLeft: "-0.5rem",
+  marginTop: "0.4rem",
   "& .MuiInputBase-input": {
     padding: theme.spacing(1, 1, 1, 0),
     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
@@ -47,6 +48,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 const searchIconStyles = {
   color: "var(--grey-2)",
   marginLeft: "-0.6rem",
+  marginTop: "0.4rem",
 };
 
 function Widgets() {
@@ -66,8 +68,8 @@ function Widgets() {
 
       <TwitterTimelineEmbed
         sourceType="profile"
-        screenName="steven_cons"
-        options={{ height: 1000 }}
+        screenName="rauchg"
+        options={{ height: 610 }}
       />
     </div>
   );

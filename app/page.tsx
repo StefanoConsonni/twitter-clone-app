@@ -6,7 +6,6 @@ import type { NextPage } from "next";
 import styles from "./styles.module.css";
 
 // components
-import Head from "next/head";
 import Feed from "../components/Feed/Feed";
 import Sidebar from "../components/Sidebar/Sidebar";
 import Widgets from "../components/Widgets/Widgets";

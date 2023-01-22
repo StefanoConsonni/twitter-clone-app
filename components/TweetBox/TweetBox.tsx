@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import styles from "./styles.module.css";
 
@@ -14,9 +14,17 @@ const iconStyles = {
   fontSize: "1.4rem",
   marginRight: "0.6rem",
   cursor: "pointer",
+  transitionProperty: "transform",
+  transitionDuration: "150ms",
+  transitionTimingFunction: "cubic-bezier(0, 0, 0.2, 1)",
+  "&:hover": {
+    transform: "scale(1.25)",
+  },
 };
 
 function TweetBox() {
+  const [inputValue, setInputValue] = useState<string>("");
+
   return (
     <>
       <div className={styles["tweetbox-container"]}>
@@ -24,12 +32,22 @@ function TweetBox() {
           src={avatarPic}
           alt="avatar picture"
           width={50}
-          style={{ borderRadius: "100%", objectFit: "cover" }}
+          style={{
+            borderRadius: "100%",
+            objectFit: "cover",
+            marginTop: "1rem",
+          }}
         />
 
         <div className={styles["tweetbox-form-container"]}>
           <form className={styles["tweetbox-form"]}>
-            <input type="text" placeholder="What's happening?" />
+            <input
+              type="text"
+              placeholder="What's happening?"
+              value={inputValue}
+              onChange={(e) => setInputValue(e.target.value)}
+              className={styles["tweetbox-form-input"]}
+            />
             <div className={styles["tweetbox-icons-button-container"]}>
               <div className={styles["tweetbox-icons-container"]}>
                 <CropOriginalIcon sx={iconStyles} />
@@ -38,7 +56,12 @@ function TweetBox() {
                 <InsertInvitationIcon sx={iconStyles} />
                 <LocationOnIcon sx={iconStyles} />
               </div>
-              <button className={styles["tweetbox-button"]}>Tweet</button>
+              <button
+                disabled={!inputValue}
+                className={styles["tweetbox-button"]}
+              >
+                Tweet
+              </button>
             </div>
           </form>
         </div>

@@ -6,7 +6,7 @@
 .tweetbox-icons-container {
   display: flex;
   flex: 1 1 0%;
-  margin-left: 0.5rem;
+  margin-left: 0.1rem;
   color: var(--light-blue);
 }
 
@@ -23,6 +23,17 @@
   flex-direction: column;
 }
 
+.tweetbox-form-input {
+  font-size: 1.2rem;
+  height: 5rem;
+  border: none;
+  outline: none;
+}
+
+.tweetbox-form-input::placeholder {
+  color: var(--grey-2);
+}
+
 .tweetbox-icons-button-container {
   display: flex;
   align-items: center;
@@ -36,4 +47,14 @@
   padding: 0.6rem 1.2rem;
   font-size: 1rem;
   cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tweetbox-button:hover {
+  background: var(--light-blue-hover);
+}
+
+.tweetbox-button:disabled {
+  opacity: 60%;
+  cursor: default;
 }
