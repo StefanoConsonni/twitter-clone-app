@@ -26,6 +26,7 @@
     "next-sanity": "4.0.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-timeago": "7.1.0",
     "react-twitter-embed": "4.0.4",
     "sanity": "3.2.3",
     "sanity-plugin-iframe-pane": "2.1.1",

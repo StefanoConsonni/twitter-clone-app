@@ -1,8 +1,8 @@
-import React from "react";
 import styles from "./styles.module.css";
+import { Icon } from "@mui/material";
 
-interface SidebarRowProps {
-  Icon: React.FC<any>;
+interface Props {
+  Icon: typeof Icon;
   title: string;
 }
 
@@ -11,7 +11,7 @@ const iconStyles = {
   marginRight: "1rem",
 };
 
-function SidebarRow({ Icon, title }: SidebarRowProps) {
+function SidebarRow({ Icon, title }: Props) {
   return (
     <div className={styles["sidebar-row-container"]}>
       <Icon sx={iconStyles} />

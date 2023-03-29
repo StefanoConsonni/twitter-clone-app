@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import { sanityClient } from "../../lib/sanity/sanity.client";
+import { sanityClient } from "../../utils/lib/sanity/sanity.client";
 import { groq } from "next-sanity";
 import { ITweet } from "../../interfaces";
 
@@ -19,7 +19,6 @@ export default async function handler(
   res: NextApiResponse<Data>
 ) {
   const tweets: ITweet[] = await sanityClient.fetch(feedQuery);
-  console.log(tweets);
 
   res.status(200).json({ tweets });
 }

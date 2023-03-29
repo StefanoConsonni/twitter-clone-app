@@ -33,7 +33,7 @@ function Feed() {
         .then((res: AxiosResponse) => res.data);
     },
   });
-  console.log(data);
+  console.log("data", data);
 
   if (isLoading) {
     return <h1>Loading...</h1>;
@@ -55,7 +55,7 @@ function Feed() {
 
       {/* Feed */}
       <div>
-        {data.map((tweet: ITweet) => (
+        {data.tweets.map((tweet: ITweet) => (
           <Tweet key={tweet._id} tweet={tweet} />
         ))}
       </div>
