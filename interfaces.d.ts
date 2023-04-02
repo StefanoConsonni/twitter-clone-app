@@ -2,7 +2,7 @@ export interface ITweetBody {
   text: string;
   username: string;
   profileImg: string;
-  image?: string;
+  tweetImage?: string;
 }
 
 export interface ITweet extends ITweetBody {

@@ -1,13 +1,12 @@
 "use client";
 
 import { useQuery } from "@tanstack/react-query";
-import { default as axios, AxiosResponse } from "axios";
-
-import styles from "./styles.module.css";
-import SyncIcon from "@mui/icons-material/Sync";
 import TweetBox from "../TweetBox/TweetBox";
 import Tweet from "../Tweet/Tweet";
 import { ITweet } from "../../interfaces";
+import styles from "./styles.module.css";
+import SyncIcon from "@mui/icons-material/Sync";
+import { CircularProgress } from "@mui/material";
 
 const iconStyles = {
   color: "var(--light-blue)",
@@ -28,15 +27,15 @@ function Feed() {
   const { data, isLoading, isError, refetch } = useQuery({
     queryKey: ["tweets"],
     queryFn: () => {
-      return axios
-        .get(`${process.env.NEXT_PUBLIC_BASE_URL}/api/getTweets`)
-        .then((res: AxiosResponse) => res.data);
+      return fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/getTweets`).then(
+        (res) => res.json()
+      );
     },
   });
   console.log("data", data);
 
   if (isLoading) {
-    return <h1>Loading...</h1>;
+    return <CircularProgress />;
   }
 
   if (isError) {

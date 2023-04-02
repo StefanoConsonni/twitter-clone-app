@@ -3,26 +3,61 @@ import TimeAgo from "react-timeago";
 import { ITweet } from "../../interfaces";
 import urlFor from "../../utils/functions/urlFor";
 
+import styles from "./styles.module.css";
+import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import RepeatIcon from "@mui/icons-material/Repeat";
+import IosShareIcon from "@mui/icons-material/IosShare";
+
 interface Props {
   tweet: ITweet;
 }
 
 function Tweet({ tweet }: Props) {
   return (
-    <div>
-      <div>
+    <div className={styles["container-tweet"]}>
+      <div className={styles["container-tweet-header"]}>
         <Image
           src={urlFor(tweet.profileImg).url()}
           alt={"profile picture of" + tweet.username}
+          className={styles["profile-img"]}
           width={50}
           height={50}
         />
+        <div>
+          <div className={styles["tweet-infos"]}>
+            <p className={styles["tweet-user"]}>{tweet.username}</p>
+            <p className={styles["tweet-alias"]}>
+              @{tweet.username.replace(/\s+/g, "").toLowerCase()}
+            </p>
+            <TimeAgo className={styles["created-at"]} date={tweet._createdAt} />
+          </div>
+          <p>{tweet.text}</p>
+          {tweet.tweetImage && (
+            <Image
+              src={urlFor(tweet.tweetImage).url()}
+              alt="tweet image"
+              className={styles["tweet-image"]}
+              width={50}
+              height={50}
+            />
+          )}
+        </div>
       </div>
 
-      <div>
-        <p>{tweet.username}</p>
-        <p>@{tweet.username.replace(/\s+/g, "").toLowerCase()}</p>
-        <TimeAgo className="" date={tweet._createdAt} />
+      <div className={styles["container-tweet-actions"]}>
+        <div>
+          <ChatBubbleOutlineIcon />
+        </div>
+        <div>
+          <RepeatIcon />
+        </div>
+        <div>
+          <FavoriteBorderIcon />
+        </div>
+        <div>
+          <IosShareIcon />
+        </div>
       </div>
     </div>
   );

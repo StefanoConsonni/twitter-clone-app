@@ -1,8 +1,9 @@
 import styles from "./styles.module.css";
-import { Icon } from "@mui/material";
+import { SvgIconTypeMap } from "@mui/material";
+import { OverridableComponent } from "@mui/material/OverridableComponent";
 
 interface Props {
-  Icon: typeof Icon;
+  Icon: OverridableComponent<SvgIconTypeMap<{}, "svg">> & { muiName: string };
   title: string;
 }
 
