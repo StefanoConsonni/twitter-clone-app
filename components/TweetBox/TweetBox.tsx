@@ -12,7 +12,7 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 
 const iconStyles = {
   fontSize: "1.4rem",
-  marginRight: "0.6rem",
+  marginRight: "1rem",
   cursor: "pointer",
   transitionProperty: "transform",
   transitionDuration: "150ms",

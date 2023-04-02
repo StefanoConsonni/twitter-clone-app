@@ -9,6 +9,20 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import RepeatIcon from "@mui/icons-material/Repeat";
 import IosShareIcon from "@mui/icons-material/IosShare";
 
+const iconStyles = {
+  fontSize: "1.3rem",
+  cursor: "pointer",
+  transitionProperty: "transform",
+  transitionDuration: "150ms",
+  transitionTimingFunction: "cubic-bezier(0, 0, 0.2, 1)",
+  "&:hover": {
+    transform: "scale(1.25)",
+  },
+  "&:active": {
+    transform: "scale(1.25)",
+  },
+};
+
 interface Props {
   tweet: ITweet;
 }
@@ -46,17 +60,18 @@ function Tweet({ tweet }: Props) {
       </div>
 
       <div className={styles["container-tweet-actions"]}>
-        <div>
-          <ChatBubbleOutlineIcon />
+        <div className={styles["container-action-icon"]}>
+          <ChatBubbleOutlineIcon sx={iconStyles} />
+          <p>5</p>
         </div>
-        <div>
-          <RepeatIcon />
+        <div className={styles["container-action-icon"]}>
+          <RepeatIcon sx={iconStyles} />
         </div>
-        <div>
-          <FavoriteBorderIcon />
+        <div className={styles["container-action-icon"]}>
+          <FavoriteBorderIcon sx={iconStyles} />
         </div>
-        <div>
-          <IosShareIcon />
+        <div className={styles["container-action-icon"]}>
+          <IosShareIcon sx={iconStyles} />
         </div>
       </div>
     </div>
