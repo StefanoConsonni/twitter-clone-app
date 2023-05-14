@@ -27,12 +27,13 @@ function Feed() {
   const { data, isLoading, isError, refetch } = useQuery({
     queryKey: ["tweets"],
     queryFn: () => {
-      return fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/getTweets`).then(
-        (res) => res.json()
-      );
+      return fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/getTweets`)
+        .then((res) => res.json())
+        .catch((err) => {
+          throw new Error(err);
+        });
     },
   });
-  console.log("data", data);
 
   if (isLoading) {
     return <CircularProgress />;
